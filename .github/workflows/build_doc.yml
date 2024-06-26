@@ -13,10 +13,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.repository == 'euroargodev/ghpages_doc_template'
+    if: github.repository == 'euroargodev/ghpages_doc_template' and github.ref == 'refs/heads/main'    
     defaults:
       run:
         shell: bash -l {0}
+        
     steps:
       - name: Cancel previous runs
         uses: styfle/cancel-workflow-action@0.9.1
@@ -40,18 +41,18 @@ jobs:
           jupyter-book build .
 
       # Zip the site (so it can be handed to the preview action)
-      - name: Zip the site
-        run: |
-          set -x
-          set -e
-          if [ -f site.zip ]; then
-              rm -rf site.zip
-          fi
-          zip -r site.zip ./_build/html
-      - uses: actions/upload-artifact@v3
-        with:
-          name: site-zip
-          path: ./site.zip
+#      - name: Zip the site
+#        run: |
+#          set -x
+#          set -e
+#          if [ -f site.zip ]; then
+#              rm -rf site.zip
+#          fi
+#          zip -r site.zip ./_build/html
+#      - uses: actions/upload-artifact@v3
+#        with:
+#          name: site-zip
+#          path: ./site.zip
 
       # Upload the book's HTML as an artifact
       - name: Upload artifact
@@ -59,16 +60,15 @@ jobs:
         with:
           path: "_build/html"
 
-      # Push the site's HTML to github-pages (only if on main, previews are sent to netlify)
-      - name: Deploy to GitHub pages
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3.8.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_build/html
-          enable_jekyll: false
+#      # Push the site's HTML to github-pages (only if on main, previews are sent to netlify)
+#      - name: Deploy to GitHub pages
+#        uses: peaceiris/actions-gh-pages@v3.8.0
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_dir: ./_build/html
+#          enable_jekyll: false
 
-#      # Deploy the book's HTML to GitHub Pages
-#      - name: Deploy to GitHub Pages
-#        id: deployment
-#        uses: actions/deploy-pages@v2
+      # Deploy the book's HTML to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
