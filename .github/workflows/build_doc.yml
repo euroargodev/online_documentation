@@ -61,36 +61,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_build/html
           enable_jekyll: false
-
-  build_pdf:
-    runs-on: ubuntu-latest
-    if: github.event_name == 'release'
-    needs: build
-    defaults:
-      run:
-        shell: bash -l {0}
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.9
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-
-      - name: Install Tex
-        run: | 
-          sudo apt-get install texlive-latex-recommended texlive-latex-extra \
-                     texlive-fonts-recommended texlive-fonts-extra \
-                     texlive-xetex latexmk
-
-      - name: Build the book as pdf #This needs to happen after the site is zipped, since this builds different html that we dont want on the website
-        run: |
-           jupyter-book build . --builder pdflatex
-
-      - uses: actions/upload-artifact@v3
-        with:
-           name: book-pdf
-           path: _build/latex/python.pdf
