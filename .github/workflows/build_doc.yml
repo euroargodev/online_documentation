@@ -53,6 +53,12 @@ jobs:
           name: site-zip
           path: ./site.zip
 
+      # Upload the book's HTML as an artifact
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: "_build/html"
+
       # Push the site's HTML to github-pages (only if on main, previews are sent to netlify)
       - name: Deploy to GitHub pages
         if: github.ref == 'refs/heads/main'
@@ -61,3 +67,8 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_build/html
           enable_jekyll: false
+
+#      # Deploy the book's HTML to GitHub Pages
+#      - name: Deploy to GitHub Pages
+#        id: deployment
+#        uses: actions/deploy-pages@v2
