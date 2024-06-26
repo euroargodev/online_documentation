@@ -13,7 +13,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.repository == 'euroargodev/ghpages_doc_template' and github.ref == 'refs/heads/main'    
+    if: github.repository == 'euroargodev/ghpages_doc_template' & github.ref == 'refs/heads/main'    
     defaults:
       run:
         shell: bash -l {0}
