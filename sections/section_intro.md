@@ -1,7 +1,11 @@
 (section-1)=
 # Introduction to markdown
 
-Some dummy stuff to get you started with markdown.
+Markdown makes writing on the web fast and easy. 
+
+> Using Markdown is different than using a WYSIWYG editor. In an application like Microsoft Word, you click buttons to format words and phrases, and the changes are visible immediately. Markdown isn’t like that. When you create a Markdown-formatted file, you add Markdown syntax to the text to indicate which words and phrases should look different.
+
+On these documentation pages you will find only the basics, we recommend you to look at [The Markdown Guide](https://www.markdownguide.org/getting-started) for a more detailed description.
 
 ## The Basics
 We'll introduce you to the basics of standard markdown. 
