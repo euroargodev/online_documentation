@@ -11,8 +11,8 @@ repository:
 html:
   use_repository_button: true
   use_issues_button: true
-  use_edit_page_button: true
-  announcement: "⚠️ This is a template website ! ⚠️"
+  use_edit_page_button: false
+  announcement: "⚠️ This is a template website ⚠️"
   extra_footer: |
     <p>  By the Euro-Argo Dev community using
       <a href="https://jupyterbook.org/intro.html"   target="_blank">Jupyter Book</a>. 
