@@ -10,12 +10,17 @@ repository:
   branch: main
 html:
   use_repository_button: true
-  use_issues_button: true
-  use_edit_page_button: false
+  use_issues_button: false
+  use_edit_page_button: true
+  search_bar_text: "Search..."
+  home_page_in_toc: false
   announcement: "⚠️ This is a template website ⚠️"
   extra_footer: |
+    <p><a href="https://jupyterbook.org/intro.html" target="_blank">Make an suggestion about this page</a></p>
+    <br>
     <p>  By the Euro-Argo Dev community using
-      <a href="https://jupyterbook.org/intro.html"   target="_blank">Jupyter Book</a>. 
+      <a href="https://jupyterbook.org/intro.html" target="_blank">Jupyter Book</a>.
+      
       This work is licensed under a 
       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> Creative Commons Attribution 4.0 Generic License.</a> 
     </p>
