@@ -8,4 +8,4 @@ The documentation is built using the [Jupyter book](https://jupyterbook.org/en/s
 
 ## Usage
 
-To create your own documentation using this template ...
+To create your own documentation using this template [...]
