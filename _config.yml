@@ -10,14 +10,16 @@ repository:
   branch: main
 html:
   use_repository_button: true
-  use_issues_button: false
   use_edit_page_button: true
-  search_bar_text: "Search..."
-  home_page_in_toc: false
+  use_issues_button: false
+  home_page_in_navbar: false
   announcement: "⚠️ This is a template website ⚠️"
   extra_footer: |
-    <p><a href="https://jupyterbook.org/intro.html" target="_blank">Click here to make an suggestion about this page</a></p>
-    <br>
+    <div>
+      <a href="https://github.com/euroargodev/online_documentation/issues/new?labels=doc-edit&template=doc_edit_template.md" target="_blank">Click here to make an suggestion about this page</a>
+      | <a href="https://github.com/euroargodev/online_documentation/issues/new?labels=doc-edit&template=doc_error_template.md" target="_blank">Click here to report an error on this page</a>
+    </div>
+    <hr>
     <p>  By the Euro-Argo Dev community using
       <a href="https://jupyterbook.org/intro.html" target="_blank">Jupyter Book</a>.
       
