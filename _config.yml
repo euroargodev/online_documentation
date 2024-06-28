@@ -1,7 +1,7 @@
 title: "Euro-Argo-Dev Documentation"
 copyright: ""
 author: ""
-logo: images/logo_euroargo_square.jpg
+logo: images/logo_euroargo_square.png
 
 execute:
   execute_notebooks: "off"
