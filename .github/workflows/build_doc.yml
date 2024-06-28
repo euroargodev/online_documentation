@@ -62,7 +62,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _build/html
+          path: content/_build/html
 
       - name: Energy Estimation - Measure Documentation Build
         uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
