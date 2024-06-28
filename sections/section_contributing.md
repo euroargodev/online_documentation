@@ -12,5 +12,5 @@ Click the Github>"Open Issue" icons to suggest a modification to a given page
 :::
 
 This should take users to the documentation hosting repository where one of the following templates can used:
-- "Suggest Documentation change"
-- "Report an error on the documentation"
+- ["Suggest Documentation change"](https://github.com/euroargodev/online_documentation/issues/new?assignees=&labels=doc-edit&projects=&template=doc_edit_template.md&title=)
+- ["Report an error on the documentation"](https://github.com/euroargodev/online_documentation/issues/new?assignees=&labels=doc-error&projects=&template=doc_error_template.md&title=)
