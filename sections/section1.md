@@ -1,5 +1,5 @@
 (section-1)=
-# Documentation section 1
+# Introduction to markdown
 
 Some dummy stuff to get you started with markdown.
 
