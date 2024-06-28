@@ -1,4 +1,3 @@
-(section-1)=
 # Introduction to markdown
 
 Markdown makes writing on the web fast and easy. 

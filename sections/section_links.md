@@ -1,4 +1,3 @@
-(section-2)=
 # Links and bibliography in markdown
 
 ## Links and Email

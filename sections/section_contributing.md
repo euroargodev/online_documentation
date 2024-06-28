@@ -1,4 +1,3 @@
-(section-4)=
 # Contributing to the documentation
 
 ## Suggest modification

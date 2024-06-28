@@ -1,4 +1,3 @@
-(section-3)=
 # Inserting Figures in markdown
 
 ## Directly inline (quick insert)
