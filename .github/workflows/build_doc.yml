@@ -32,6 +32,16 @@ jobs:
         shell: bash -l {0}
         
     steps:
+      - name: Energy Estimation - Initialize
+        if: ${{matrix.os == 'ubuntu-latest'}}
+        uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
+        with:
+          task: start-measurement
+          company-uuid: ${{ secrets.CARBONDB_COMPANY_UUID }}
+          project-uuid: ${{ secrets.CARBONDB_PROJECT_UUID }}
+          machine-uuid: ${{ secrets.CARBONDB_MACHINE_UUID_DOC }}
+        continue-on-error: true
+
       - uses: actions/checkout@v4
 
       # Install dependencies
@@ -55,6 +65,27 @@ jobs:
         with:
           path: _build/html
 
+      - name: Energy Estimation - Measure Documentation Build
+        if: ${{matrix.os == 'ubuntu-latest'}}
+        uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
+        env:
+          ELECTRICITY_MAPS_TOKEN: ${{ secrets.ELECTRICITY_MAPS_TOKEN }}
+        with:
+          task: get-measurement
+          label: 'documentation-build'
+        continue-on-error: true
+
+      - name: Energy Estimation - Show Results
+        if: ${{matrix.os == 'ubuntu-latest'}}
+        uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
+        env:
+          ELECTRICITY_MAPS_TOKEN: ${{ secrets.ELECTRICITY_MAPS_TOKEN }}
+        with:
+          task: display-results
+          pr-comment: false
+          send-data: true
+        continue-on-error: true
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -65,10 +96,40 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      - name: Energy Estimation - Initialize
+        if: ${{matrix.os == 'ubuntu-latest'}}
+        uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
+        with:
+          task: start-measurement
+          company-uuid: ${{ secrets.CARBONDB_COMPANY_UUID }}
+          project-uuid: ${{ secrets.CARBONDB_PROJECT_UUID }}
+          machine-uuid: ${{ secrets.CARBONDB_MACHINE_UUID_DOC }}
+        continue-on-error: true
 
       # Deploy the book's HTML to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Energy Estimation - Measure Documentation Deploy
+        if: ${{matrix.os == 'ubuntu-latest'}}
+        uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
+        env:
+          ELECTRICITY_MAPS_TOKEN: ${{ secrets.ELECTRICITY_MAPS_TOKEN }}
+        with:
+          task: get-measurement
+          label: 'documentation-deploy'
+        continue-on-error: true
+
+      - name: Energy Estimation - Show Results
+        if: ${{matrix.os == 'ubuntu-latest'}}
+        uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
+        env:
+          ELECTRICITY_MAPS_TOKEN: ${{ secrets.ELECTRICITY_MAPS_TOKEN }}
+        with:
+          task: display-results
+          pr-comment: false
+          send-data: true
+        continue-on-error: true
 
 
