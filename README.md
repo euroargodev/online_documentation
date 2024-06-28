@@ -8,4 +8,7 @@ The documentation is built using the [Jupyter book](https://jupyterbook.org/en/s
 
 ## Usage
 
-To create your own documentation, create a new repository by clicking on the "Use this template" green button.
+To create your own documentation, create a new repository by clicking on the ["Use this template" green button above](https://github.com/new?template_name=online_documentation&template_owner=euroargodev).
+
+More details here:
+https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
