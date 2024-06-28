@@ -33,6 +33,6 @@ If the link text itself would make a good id, you can link [like this][] `[like 
 
 It is possible to include a bibliography with the `bib` format, and add references in the documentation. The {numref}`section-biblio` will automatically be filled.
 
-For instance, talking about a software, it is important to cite the corresponding paper like {cite}`maze-2020`.
+For instance, talking about a software, it is important to cite the corresponding paper like {cite:t}`maze-2020`.
 
 Add new references in the `biblio.bib` file.
