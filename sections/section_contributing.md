@@ -3,9 +3,14 @@
 
 ## Suggest modification
 
-The easiest method to suggest modifications to the documentation maintainers is to click the "Open issues" button at the top of the page to be modified.
+The easiest method to suggest modifications to the documentation maintainers is to click the "Open issue" button at the top of the page to be modified:
 
+:::{figure-md} contributing
+<img src="/images/screenshot_contributing.png">
 
-This should take users to the documentation hosting repository where one of the templates can used:
-- "Suggest Documentation change",
+Click the Github>"Open Issue" icons to suggest a modification to a given page
+:::
+
+This should take users to the documentation hosting repository where one of the following templates can used:
+- "Suggest Documentation change"
 - "Report an error on the documentation"
