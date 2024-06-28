@@ -4,4 +4,6 @@ options:  # The options key will be applied to all chapters, but not sub-section
   numbered: true
 chapters:
 - file: sections/section1
+- file: sections/section2
+- file: sections/section3
 - file: sections/references

@@ -29,6 +29,6 @@ If the link text itself would make a good id, you can link [like this][] `[like 
 
 #### Bibliography
 
-It is possible to include a bibliography with the `bib` format, and add references in the documentation. The [reference]() section will automatically be filled.
+It is possible to include a bibliography with the `bib` format, and add references in the documentation. The {numref}`section-biblio` will automatically be filled.
 
 For instance, taling about a software, it is important to cite the corresponding paper: {cite}`maze-2020`.

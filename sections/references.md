@@ -1,3 +1,4 @@
+(section-biblio)=
 # References
 
 ```{bibliography}
