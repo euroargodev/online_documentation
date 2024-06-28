@@ -20,7 +20,7 @@ Use:
 
 ```rst
 :::{figure-md} ArgoFloat-cycle
-<img src="/images/float_cycle_2_credits.png" alt="Argo floats cycle" class="bg-primary mb-1" width="400px">
+<img src="/images/float_cycle_2_credits.png" alt="Argo floats cycle" class="mb-1" width="400px">
 
 Illustration of the Argo float cycling program at sea.
 :::
