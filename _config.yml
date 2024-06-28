@@ -15,9 +15,9 @@ html:
   home_page_in_navbar: false
   announcement: "⚠️ This is a template website ⚠️"
   extra_footer: |
-    <div>
-      <a href="https://github.com/euroargodev/online_documentation/issues/new?labels=doc-edit&template=doc_edit_template.md" target="_blank">Click here to make an suggestion about this page</a>
-      | <a href="https://github.com/euroargodev/online_documentation/issues/new?labels=doc-edit&template=doc_error_template.md" target="_blank">Click here to report an error on this page</a>
+    <div> ️
+      <a href="https://github.com/euroargodev/online_documentation/issues/new?labels=doc-edit&template=doc_edit_template.md" target="_blank">✏ Click here to make a suggestion about this page</a>
+      | <a href="https://github.com/euroargodev/online_documentation/issues/new?labels=doc-error&template=doc_error_template.md" target="_blank">🚨 Report an error on this page</a>
     </div>
     <hr>
     <p>  By the Euro-Argo Dev community using
@@ -25,6 +25,10 @@ html:
       
       This work is licensed under a 
       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> Creative Commons Attribution 4.0 Generic License.</a> 
+    
+    <div>
+      <a href="https://metrics.green-coding.io/ci.html?repo=euroargodev%2Fonline_documentation&amp;branch=main&amp;workflow=104534311"><img src="https://api.green-coding.io/v1/ci/badge/get?repo=euroargodev/online_documentation&amp;branch=main&amp;workflow=104534311"></a>   
+    </div>
     </p>
   extra_navbar: |
     <div>
