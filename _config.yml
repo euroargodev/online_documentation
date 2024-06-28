@@ -1,7 +1,7 @@
 title: "Euro-Argo-Dev Documentation"
 copyright: ""
 author: ""
-logo: images/logo_euroargo.jpg
+logo: images/logo_euroargo_square.jpg
 
 execute:
   execute_notebooks: "off"
@@ -12,9 +12,7 @@ html:
   use_repository_button: true
   use_issues_button: true
   use_edit_page_button: true
-  comments:
-    utterances:
-      repo: "euroargodev/ghpages_doc_template"
+  announcement: "⚠️ This is a template website ! ⚠️"
   extra_footer: |
     <p>  By the Euro-Argo Dev community using
       <a href="https://jupyterbook.org/intro.html"   target="_blank">Jupyter Book</a>. 
