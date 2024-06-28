@@ -31,4 +31,4 @@ sphinx:
 
 bibtex_reference_style      : author_year_round
 bibtex_default_style        : myapastyle
-bibtex_bibfiles             : biblio.bib
+bibtex_bibfiles             : [biblio.bib]
