@@ -38,7 +38,7 @@ jobs:
           company-uuid: ${{ secrets.CARBONDB_COMPANY_UUID }}
           project-uuid: ${{ secrets.CARBONDB_PROJECT_UUID }}
           machine-uuid: ${{ secrets.CARBONDB_MACHINE_UUID_DOC }}
-        continue-on-error: false
+        continue-on-error: true
 
       - uses: actions/checkout@v4
 
@@ -70,7 +70,7 @@ jobs:
         with:
           task: get-measurement
           label: 'documentation-build'
-        continue-on-error: false
+        continue-on-error: true
 
       - name: Energy Estimation - Show Results
         uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
@@ -80,7 +80,7 @@ jobs:
           task: display-results
           pr-comment: false
           send-data: true
-        continue-on-error: false
+        continue-on-error: true
 
   deploy:
     needs: build
@@ -99,7 +99,7 @@ jobs:
           company-uuid: ${{ secrets.CARBONDB_COMPANY_UUID }}
           project-uuid: ${{ secrets.CARBONDB_PROJECT_UUID }}
           machine-uuid: ${{ secrets.CARBONDB_MACHINE_UUID_DOC }}
-        continue-on-error: false
+        continue-on-error: true
 
       # Deploy the book's HTML to GitHub Pages
       - name: Deploy to GitHub Pages
@@ -113,7 +113,7 @@ jobs:
         with:
           task: get-measurement
           label: 'documentation-deploy'
-        continue-on-error: false
+        continue-on-error: true
 
       - name: Energy Estimation - Show Results
         uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
@@ -123,4 +123,4 @@ jobs:
           task: display-results
           pr-comment: false
           send-data: true
-        continue-on-error: false
+        continue-on-error: true
