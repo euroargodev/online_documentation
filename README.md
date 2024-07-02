@@ -10,20 +10,27 @@ The documentation is built using the [Jupyter book](https://jupyterbook.org/en/s
 
 ### Create your own repository
 
-To create your own documentation, create a new repository by clicking on the ["Use this template" green button above](https://github.com/new?template_name=online_documentation&template_owner=euroargodev).
+To create your own documentation using this template, you have to clone this repository using the [green button "Use this template" above](https://github.com/new?template_name=online_documentation&template_owner=euroargodev).
 
 More details here:
 https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template
+
+- [ ] Create your own repository
 
 ### Enable documentation online rendering
 
 In the repository you created using this template, go to "Settings", then "Pages" and change the "Source" parameter to "Github Actions".
 
-## Update configuration with new repo
+- [ ] Github Pages enabled
+
+### Update configuration with new repo
 
 Edit the `content/_config.yml` and update parameters with the new repo data.
 
-Especialy, replace any `euroargodev` occurrences with your own `OWNER` name, and similarly with `online_documentation` occurences with your `<REPO>` name.
+2 parameters must be updated:
+
+- replace any template `euroargodev` occurrences with your own `OWNER` name,
+- replace any template `online_documentation` occurences with your `<REPO>` name.
 
 ```yml
 repository:
@@ -42,8 +49,26 @@ repository:
       <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"> Creative Commons Attribution 4.0 Generic License.</a> 
     
     <div>
-      <a href="https://metrics.green-coding.io/ci.html?repo=<OWNER>%2F<REPO>&amp;branch=main&amp;workflow=104534311"><img src="https://api.green-coding.io/v1/ci/badge/get?repo=<OWNER>/<REPO>&amp;branch=main&amp;workflow=104534311"></a>   
+      <a href="https://metrics.green-coding.io/ci.html?repo=<OWNER>%2F<REPO>&amp;branch=main&amp;workflow=<WORKFLOW_ID>"><img src="https://api.green-coding.io/v1/ci/badge/get?repo=<OWNER>/<REPO>&amp;branch=main&amp;workflow=<WORKFLOW_ID>"></a>   
     </div>
     </p>
 ```
+
+- [ ] Content configuration updated with my own repository data
+
+
+## Use Green-Coding energy/CO2e measurements
+
+Interesting in monitoring the energy consumption and CO2e emission associated with the building and deployment of your documentation ?
+
+The documentation template is equiped to do this, but some parameters msut be updated first. Follow these steps:
+
+### Edit the `content/_config.yml` 
+
+and update parameters with the new repo data.
+
+1 parameter must be updated:
+
+- replace any template `104534311` occurences with your `<WORKFLOW_ID>` value.
+
 
