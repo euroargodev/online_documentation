@@ -85,11 +85,11 @@ In order to identify your documentation within the [📊 euroargodev overall ene
 
 Once you created you secrets, build the documentation manually by executing the Github action:
 
-**screenshot**
+<img width="1369" alt="Screenshot 2024-07-02 at 10 38 12" src="https://github.com/euroargodev/online_documentation/assets/1956032/816c4a91-c5dc-4464-a3ed-53ff55ac07c1">
 
 Once the documentation is built and deployed, look at the action summary and look for the workflow parameter in the url:
 
-**screenshot**
+<img width="1353" alt="Screenshot 2024-07-02 at 10 39 49" src="https://github.com/euroargodev/online_documentation/assets/1956032/f706ccef-4068-48a4-9a94-c653adfd3126">
 
 This workflow id must be used in the repository `content/_config.yml` file: replace any template `104534311` occurences with your own `<WORKFLOW_ID>` value:
 
