@@ -32,12 +32,12 @@ jobs:
         
     steps:
       - name: Energy Estimation - Initialize
-        uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
+        uses: green-coding-solutions/eco-ci-energy-estimation@v4
         with:
           task: start-measurement
-          company-uuid: ${{ secrets.CARBONDB_COMPANY_UUID }}
-          project-uuid: ${{ secrets.CARBONDB_PROJECT_UUID }}
-          machine-uuid: ${{ secrets.CARBONDB_MACHINE_UUID_DOC }}
+          project: ${{ secrets.CARBONDB_PROJECT_UUID }}
+          tags: "${{github.workflow}},Company-${{ secrets.CARBONDB_COMPANY_UUID }}"
+          send-data: true
         continue-on-error: true
 
       - uses: actions/checkout@v4
@@ -64,22 +64,16 @@ jobs:
           path: content/_build/html
 
       - name: Energy Estimation - Measure Documentation Build
-        uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
-        env:
-          ELECTRICITY_MAPS_TOKEN: ${{ secrets.ELECTRICITY_MAPS_TOKEN }}
+        uses: green-coding-solutions/eco-ci-energy-estimation@v4
         with:
           task: get-measurement
           label: 'documentation-build'
         continue-on-error: true
 
       - name: Energy Estimation - Show Results
-        uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
-        env:
-          ELECTRICITY_MAPS_TOKEN: ${{ secrets.ELECTRICITY_MAPS_TOKEN }}
+        uses: green-coding-solutions/eco-ci-energy-estimation@v4
         with:
           task: display-results
-          pr-comment: false
-          send-data: true
         continue-on-error: true
 
   deploy:
@@ -96,9 +90,9 @@ jobs:
         uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
         with:
           task: start-measurement
-          company-uuid: ${{ secrets.CARBONDB_COMPANY_UUID }}
-          project-uuid: ${{ secrets.CARBONDB_PROJECT_UUID }}
-          machine-uuid: ${{ secrets.CARBONDB_MACHINE_UUID_DOC }}
+          project: ${{ secrets.CARBONDB_PROJECT_UUID }}
+          tags: "${{github.workflow}},Company-${{ secrets.CARBONDB_COMPANY_UUID }}"
+          send-data: true
         continue-on-error: true
 
       # Deploy the book's HTML to GitHub Pages
@@ -108,8 +102,6 @@ jobs:
 
       - name: Energy Estimation - Measure Documentation Deploy
         uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
-        env:
-          ELECTRICITY_MAPS_TOKEN: ${{ secrets.ELECTRICITY_MAPS_TOKEN }}
         with:
           task: get-measurement
           label: 'documentation-deploy'
@@ -117,10 +109,6 @@ jobs:
 
       - name: Energy Estimation - Show Results
         uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
-        env:
-          ELECTRICITY_MAPS_TOKEN: ${{ secrets.ELECTRICITY_MAPS_TOKEN }}
         with:
           task: display-results
-          pr-comment: false
-          send-data: true
         continue-on-error: true

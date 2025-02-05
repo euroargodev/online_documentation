@@ -17,7 +17,6 @@ The documentation is built using [Jupyter book](https://jupyterbook.org/en/stabl
 * [☘ Use Green-Coding energy/CO2e measurements](#-use-green-coding-energyco2e-measurements)
   + [Add your documentation IDs in repository secrets](#add-your-documentation-ids-in-repository-secrets)
      - [Identify your project (repository)](#identify-your-project-repository)
-     - [Identify your runs](#identify-your-runs)
   + [Edit the `content/_config.yml` ](#edit-the-content_configyml)
 
 <!-- TOC end -->
@@ -98,12 +97,6 @@ In order to identify your documentation within the [📊 euroargodev overall ene
 1. Get a unique ID from https://www.uuidgenerator.net. Copy the generated ID (it should be a string looking like this example: `4374ec28-7bca-4893-9c69-13e638cda063`)
 1. On your repository, go to "Settings", then "Secrets and Variables" and click on the green button "New repository secret"
 1. Name it `CARBONDB_PROJECT_UUID` and paste the ID you generated in the previous step in the *secret* field, finalize by clicking on the "Add secret" green button.
-
-<!-- TOC --><a name="identify-your-runs"></a>
-#### Identify your runs
-1. Get a unique ID from https://www.uuidgenerator.net. Copy the generated ID (it should be a string looking like this example: `4374ec28-7bca-4893-9c69-13e638cda063`)
-1. On your repository, go to "Settings", then "Secrets and Variables" and click on the green button "New repository secret"
-1. Name it `CARBONDB_MACHINE_UUID_DOC` and paste the ID you generated in the previous step in the *secret* field, finalize by clicking on the "Add secret" green button.
 
 <!-- TOC --><a name="edit-the-content_configyml"></a>
 ### Edit the `content/_config.yml` 
