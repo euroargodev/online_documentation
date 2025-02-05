@@ -37,6 +37,7 @@ jobs:
           task: start-measurement
           project: ${{ secrets.CARBONDB_PROJECT_UUID }}
           tags: "${{github.workflow}},Company-${{ secrets.CARBONDB_COMPANY_UUID }}"
+          electricitymaps-api-token: ${{ secrets.ELECTRICITY_MAPS_TOKEN }}
           send-data: true
         continue-on-error: true
 
@@ -92,6 +93,7 @@ jobs:
           task: start-measurement
           project: ${{ secrets.CARBONDB_PROJECT_UUID }}
           tags: "${{github.workflow}},Company-${{ secrets.CARBONDB_COMPANY_UUID }}"
+          electricitymaps-api-token: ${{ secrets.ELECTRICITY_MAPS_TOKEN }}
           send-data: true
         continue-on-error: true
 
