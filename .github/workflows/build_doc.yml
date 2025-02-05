@@ -88,7 +88,7 @@ jobs:
 
     steps:
       - name: Energy Estimation - Initialize
-        uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
+        uses: green-coding-solutions/eco-ci-energy-estimation@v4
         with:
           task: start-measurement
           project: ${{ secrets.CARBONDB_PROJECT_UUID }}
@@ -103,14 +103,14 @@ jobs:
         uses: actions/deploy-pages@v4
 
       - name: Energy Estimation - Measure Documentation Deploy
-        uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
+        uses: green-coding-solutions/eco-ci-energy-estimation@v4
         with:
           task: get-measurement
           label: 'documentation-deploy'
         continue-on-error: true
 
       - name: Energy Estimation - Show Results
-        uses: green-coding-solutions/eco-ci-energy-estimation@v4.0-rc3
+        uses: green-coding-solutions/eco-ci-energy-estimation@v4
         with:
           task: display-results
         continue-on-error: true
