@@ -1,5 +1,7 @@
 # A template for your online documentation
 
-This repository is a template to get you started with building an online documentation.
+This repository is a template to get you started with building an online documentation using markdown files.
 
-The documentation is built using the [Jupyter book](https://jupyterbook.org/en/stable/intro.html) and hosted/deployed on Github Pages.
+This documentation is built using the [Jupyter book engine](https://jupyterbook.org/en/stable/intro.html) and is hosted/deployed on Github Pages.
+
+Note that although this template is based on markdown files, Jupyter Book also supports Jupyter Notebooks files and reStructuredText files.
